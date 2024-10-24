@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  install:
+    cmds:
+      - deno install
+
+  lint:
+    cmds:
+      - deno fmt
+
+  dev:
+    cmds:
+      - deno serve -R main.ts
