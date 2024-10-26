@@ -1,23 +1,21 @@
 import { type Route, route, serveDir } from '@std/http'
+import { defaultHandler, getHome } from './handler.ts'
+import { getUser } from './handler.ts'
 
 const routes: Route[] = [
   {
     pattern: new URLPattern({ pathname: '/' }),
-    handler: () => new Response('Home page'),
+    handler: getHome,
   },
   {
     pattern: new URLPattern({ pathname: '/users/:id' }),
-    handler: (_req, _info, params) => new Response(params?.pathname.groups.id),
+    handler: getUser,
   },
   {
     pattern: new URLPattern({ pathname: '/static/*' }),
     handler: (req) => serveDir(req),
   },
 ]
-
-function defaultHandler(_req: Request) {
-  return new Response('Not found', { status: 404 })
-}
 
 const handler = route(routes, defaultHandler)
 
