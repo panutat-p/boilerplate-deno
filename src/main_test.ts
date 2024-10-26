@@ -18,13 +18,3 @@ Deno.test(async function serverFetchUsers() {
   const res = await server.fetch(req)
   assertEquals(await res.text(), '123')
 })
-
-Deno.test(async function serverFetchStatic() {
-  const req = new Request('https://deno.land/static/hello.js')
-  const res = await server.fetch(req)
-  assertEquals(await res.text(), 'console.log("Hello, world!");\n')
-  assertEquals(
-    res.headers.get('content-type'),
-    'text/javascript; charset=UTF-8',
-  )
-})

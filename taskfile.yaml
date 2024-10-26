@@ -9,6 +9,10 @@ tasks:
     cmds:
       - deno fmt
 
+  test:
+    cmds:
+      - deno test src/
+
   dev:
     cmds:
       - deno serve -R main.ts
