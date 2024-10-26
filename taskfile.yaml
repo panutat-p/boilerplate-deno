@@ -16,3 +16,11 @@ tasks:
   dev:
     cmds:
       - deno serve -R main.ts
+
+  emoji:
+    cmds:
+      - deno run cmd/emoji.ts
+
+  ksuid:
+    cmds:
+      - deno run cmd/ksuid.ts
