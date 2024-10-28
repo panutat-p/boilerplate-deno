@@ -18,6 +18,7 @@ https://github.com/panutat-p/boilerplate-deno
 - https://docs.deno.com/runtime/fundamentals/node/#using-npm-packages
 - https://www.npmjs.com/package/node-emoji
 - https://www.npmjs.com/package/ksuid
+- https://www.npmjs.com/package/amqplib
 
 ## Deno packages
 

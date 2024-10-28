@@ -24,3 +24,7 @@ tasks:
   ksuid:
     cmds:
       - deno run cmd/ksuid.ts
+
+  amqp:
+    cmds:
+      - deno run --allow-read --allow-net --allow-env  cmd/amqp.ts
